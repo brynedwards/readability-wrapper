@@ -1,6 +1,6 @@
 {
   "name": "readability-wrapper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Command-line Wrapper for Mozilla Readability.js",
   "keywords": ["readability", "terminal"],
   "homepage": "https://github.com/brynedwards/readability-wrapper",

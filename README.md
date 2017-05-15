@@ -27,13 +27,13 @@ npm install -g readability-wrapper
 
 ## Usage
 
-`readability-wrapper` takes a single argument, a URL, and prints cleaned HTML to stdout.
+`readability` takes a single argument, a URL, and prints cleaned HTML to stdout.
 It is intended to be used with other tools. For example, as a pager for
 [Newsbeuter][3]:
 
 ```
 #!/bin/sh
-readability-wrapper "$1" | pandoc -f html -t plain | less
+readability "$1" | pandoc -f html -t plain | less
 ```
 
 Only tested with Node.js v7.10.0.
