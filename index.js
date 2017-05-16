@@ -27,5 +27,5 @@ JSDOM.fromURL(process.argv[2], {
 .then(dom => {
   const uri = url.parse(dom.window.location.href);
   const article = new Readability(uri, dom.window.document).parse();
-  console.log(article.title, "\n\n", article.content);
+  console.log("<h1>", article.title, "</h1>", article.content);
 });
