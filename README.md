@@ -27,17 +27,17 @@ npm install -g readability-wrapper
 
 ## Usage
 
-`readability` takes a single argument, a URL, and prints cleaned HTML to stdout.
-It is intended to be used with other tools. For example, as a pager for
-[Newsbeuter][3]:
+`readability` can either receive piped input or download and clean a URL.
+Cleaned HTML is printed to stdout.
+
 
 ```
-#!/bin/sh
-readability "$1" | pandoc -f html -t plain | less
+# With cURL
+$ curl <URL> | readability
+
+# Pass URL directly
+$ readability <URL>
 ```
-
-Only tested with Node.js v7.10.0.
-
 
 [1]: //www.newstatesman.com/politics/brexit/2017/05/there-new-consensus-germany-brexit-should-be-clean-and-britain-should-pay-it
 [2]: //github.com/mozilla/readability

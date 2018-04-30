@@ -14,18 +14,20 @@ global.Node = {
   TEXT_NODE: 3
 };
 
-features = { FetchExternalResources: false,
-             ProcessExternalresources: false }
+features = {
+  FetchExternalResources: false,
+  ProcessExternalresources: false
+};
 
 (
 process.argv.length === 3 ? 
-	JSDOM.fromURL(process.argv[2], {
-		features: features
-	}) :
+  JSDOM.fromURL(process.argv[2], {
+    features: features
+  }) :
 !process.stdin.isTTY ?
-	JSDOM.fromFile("/dev/stdin", {
-		features: features
-	}) :
+  JSDOM.fromFile("/dev/stdin", {
+    features: features
+  }) :
 (console.error("Please provide a URL"), process.exit(1)))
 .then(dom => {
   const uri = url.parse(dom.window.location.href);

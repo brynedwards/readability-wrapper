@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "license": "Unlicense",
-  "author": "Bryn Edwards <bryn@opmbx.org> (http://github.com/brynedwardsj)",
+  "author": "Bryn Edwards <brynedwards@gmail.com> (http://github.com/brynedwards)",
   "dependencies": {
     "jsdom": "^10.1.0",
     "readability": "git://github.com/mozilla/readability.git#f0edc77cb58ef52890e3065cf2b0e334d940feb2"
