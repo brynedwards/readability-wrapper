@@ -30,7 +30,6 @@ process.argv.length === 3 ?
   }) :
 (console.error("Please provide a URL"), process.exit(1)))
 .then(dom => {
-  const uri = url.parse(dom.window.location.href);
-  const article = new Readability(uri, dom.window.document).parse();
+  const article = new Readability(dom.window.document).parse();
   console.log("<h1>", article.title, "</h1>", article.content);
 });
