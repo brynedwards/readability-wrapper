@@ -1,44 +1,32 @@
 # readability-wrapper
 
-A wrapper to use [Firefox Reader View][2] in the terminal.
+A CLI wrapper for [Mozilla's Readability][1].
 
-## Why
-
-Many websites do not optimise for viewing in terminal web browsers: for example, opening a
-[New Statesman article][1] in Lynx produces ~180 lines for the menu, which
-means multiple page downs are required to get to the article. Doing this for
-every news article is tedious.  Passing the page through a clean-up script
-such as the one used by [Firefox Reader View][2] will remove this clutter
-and provide us with just the content.
+Requires Node.js. I usually use the latest version (10.0.0 as of writing).
 
 ## Install
 
-Install globally:
+To install globally with [yarn][2]: `yarn global add readability-wrapper`
 
-```
-yarn global add readability-wrapper
-```
-
-or
-
-```
-npm install -g readability-wrapper
-```
+To install globally with npm: `npm install -g readability-wrapper`
 
 ## Usage
 
-`readability` can either receive piped input or download and clean a URL.
+`readability` takes one or more arguments and parses each with Readability. Arguments can be either file paths or URLs.
 Cleaned HTML is printed to stdout.
 
+`readability` will parse piped input if there are no arguments.
 
-```
-# With cURL
-$ curl <URL> | readability
 
-# Pass URL directly
-$ readability <URL>
-```
+## Examples
 
-[1]: //www.newstatesman.com/politics/brexit/2017/05/there-new-consensus-germany-brexit-should-be-clean-and-britain-should-pay-it
-[2]: //github.com/mozilla/readability
-[3]: //www.newsbeuter.org
+Parse a file: `readability index.html`
+
+Parse a URL: `readability https://example.com`
+
+Pipe cURL output: `curl https://example.com | readability`
+
+Mix file paths and URLs: `readability file1.html https://example.com/`
+
+[1]: //github.com/mozilla/readability
+[2]: //yarnpkg.com/en/

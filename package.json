@@ -1,8 +1,11 @@
 {
   "name": "readability-wrapper",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Command-line Wrapper for Mozilla Readability.js",
-  "keywords": ["readability", "terminal"],
+  "keywords": [
+    "readability",
+    "terminal"
+  ],
   "homepage": "https://github.com/brynedwards/readability-wrapper",
   "repository": {
     "type": "git",
@@ -12,10 +15,15 @@
   "license": "Unlicense",
   "author": "Bryn Edwards <brynedwards@gmail.com> (http://github.com/brynedwards)",
   "dependencies": {
-    "jsdom": "^10.1.0",
+    "commander": "^2.15.1",
+    "jsdom": "^11.10.0",
     "readability": "git://github.com/mozilla/readability.git#7a24801958b5d385dc554e91140d0457a1395610"
   },
   "bin": {
     "readability": "./index.js"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "lint": "eslint index.js"
   }
 }
