@@ -13,7 +13,7 @@
   "author": "Bryn Edwards <brynedwards@gmail.com> (http://github.com/brynedwards)",
   "dependencies": {
     "jsdom": "^10.1.0",
-    "readability": "git://github.com/mozilla/readability.git#f0edc77cb58ef52890e3065cf2b0e334d940feb2"
+    "readability": "git://github.com/mozilla/readability.git#7a24801958b5d385dc554e91140d0457a1395610"
   },
   "bin": {
     "readability": "./index.js"
