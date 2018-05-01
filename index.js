@@ -42,13 +42,13 @@ const handleError = err => console.error(err.toString());
 const run = (sources) => {
   const promises = sources.map(source =>
     (isURL(source) ?
-      JSDOM.fromURL(source, options).catch(handleError) :
-      JSDOM.fromFile(source, options).catch(handleError)
+      JSDOM.fromURL(source, options) :
+      JSDOM.fromFile(source, options)
     ));
   Promise.all(promises).then((doms) => {
     doms.forEach(readability);
   })
-    .catch(err => console.error(err.toString()));
+    .catch(handleError);
 };
 
 program
