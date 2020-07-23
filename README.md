@@ -1,4 +1,11 @@
-# readability-wrapper
+**This isn't maintained, use one of these instead**
+
+- https://github.com/NightMachinary/readability-cli
+- https://gitlab.com/gardenappl/readability-cli
+
+---
+
+**readability-wrapper**
 
 A CLI wrapper for [Mozilla's Readability][1].
 
